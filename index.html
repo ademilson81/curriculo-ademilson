@@ -1,65 +1,219 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Currículo Moderno - Ademilson Albino</title>
+
     <style>
-        :root { --primary:#c74586; --secondary:#880b4e; --text:#111827; --muted:#6B7280; --bg:#FDF2F8; }
-        body { font-family:"Segoe UI", Arial, sans-serif; margin:0; background:var(--bg); color:var(--text);} 
-        .container{ max-width:900px; margin:32px auto 40px; background:#fff; padding:32px 40px; border-radius:16px; box-shadow:0 18px 45px rgba(15,23,42,.12);} 
-        .top-header{ display:flex; gap:20px; align-items:center; border-bottom:1px solid #E5E7EB; padding-bottom:16px; margin-bottom:20px;}
-        .avatar-wrapper{ width:96px; height:96px; border-radius:999px; overflow:hidden; border:2px solid #E5E7EB;}
-        .avatar-wrapper img{ width:100%; height:100%; object-fit:cover; display:block;}
-        h1{ margin:0; font-size:26px; color:var(--text);} 
-        .role{ margin:4px 0 8px; font-size:14px; font-weight:600; text-transform:uppercase; letter-spacing:.12em; color:var(--primary);} 
-        .contact-line{ font-size:13px; color:var(--muted);} 
-        .section-title{ font-size:15px; font-weight:700; color:var(--secondary); margin-bottom:6px; text-transform:uppercase; letter-spacing:.14em;}
-        .section{ margin-bottom:18px;}
-        .subinfo{ font-size:12px; color:var(--muted);} 
-        .job-title{ margin:0; font-size:14px; font-weight:600;} 
-        .job-meta{ margin:2px 0 6px; font-size:12px; color:var(--muted);} 
-        ul{ padding-left:18px; margin:4px 0 0; font-size:13px;} 
-        .skills{ display:flex; flex-wrap:wrap; gap:6px;} 
-        .skill{ padding:4px 10px; border-radius:999px; border:1px solid var(--secondary); font-size:12px; color:var(--secondary); background:var(--bg);} 
-        #downloadPDF{ display:inline-flex; align-items:center; gap:6px; margin-bottom:16px; padding:6px 12px; background:linear-gradient(135deg, var(--primary), var(--secondary)); color:#fff; border:none; border-radius:999px; font-size:11px; font-weight:600; cursor:pointer;}
-        a{ color:var(--secondary);} 
-        @media print{ #downloadPDF{ display:none;} body{ background:#fff;} .container{ margin:0; max-width:100%; box-shadow:none; border-radius:0;}}
+        :root {
+            --primary: #c74586;
+            --secondary: #880b4e;
+            --text: #111827;
+            --muted: #6B7280;
+            --bg: #FDF2F8;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 32px auto 40px;
+            background: #ffffff;
+            padding: 32px 40px;
+            border-radius: 16px;
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+        }
+
+        /* Cabeçalho: evitar desalinhamento vertical */
+        .top-header {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;      /* topo */
+            border-bottom: 1px solid #E5E7EB;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+        }
+
+        .avatar-wrapper {
+            width: 96px;
+            height: 96px;
+            border-radius: 999px;
+            overflow: hidden;
+            border: 2px solid #E5E7EB;
+            flex-shrink: 0;               /* não comprimir a imagem */
+        }
+
+        .avatar-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 26px;
+            color: var(--text);
+        }
+
+        .role {
+            margin: 4px 0 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--primary);
+        }
+
+        .contact-line {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .section {
+            margin-bottom: 22px;          /* mais respiro entre seções */
+        }
+
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 10px;          /* espaço maior abaixo do título */
+            text-transform: uppercase;
+            letter-spacing: 0.12em;       /* um pouco menos para legibilidade */
+        }
+
+        .subinfo {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .job-title {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .job-meta {
+            margin: 2px 0 6px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        ul {
+            padding-left: 18px;
+            margin: 4px 0 0;
+            font-size: 13px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill {
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--secondary);
+            font-size: 12px;
+            color: var(--secondary);
+            background: var(--bg);
+        }
+
+        #downloadPDF {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 16px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        a { color: var(--secondary); }
+
+        /* BLOCO SOBRE MIM — corrigindo alinhamento do texto */
+        .section--sobre p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0 0 10px;
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            max-width: 72ch;            /* largura ideal para leitura */
+        }
+
+        @media print {
+            #downloadPDF { display: none; }
+            body { background: #ffffff; }
+            .container {
+                margin: 0;
+                max-width: 100%;
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="top-header">
             <div class="avatar-wrapper">
-                <img src="foto-perfil.jpeg" alt="Foto de Perfil - Ademilson Albino">
+                foto-perfil.png
             </div>
             <div>
                 <h1>Ademilson Albino</h1>
                 <p class="role">Analista de Suporte Técnico | Infraestrutura, Redes & Segurança</p>
                 <div class="contact-line">
                     📞 (41) 99741-8066<br>
-                    📧 <a href="mailto:ademilson.albino@gmail.com">ademilson.albino@gmail.com</a><br>
+                    📧 <a href="mailto:ademilson.alb.comademilson.albino@gmail.com</a><br>
                     📍 Curitiba, PR<br>
-                    💼 LinkedIn: <a href="https://www.linkedin.com/in/ademilson-albino-26652420/" target="_blank">linkedin.com/in/ademilson-albino-26652420</a>
+                    💼 LinkedIn: <a href="https://www.linkedin.com/inn-albino-26652420/linkedin.com/in/ademilson-albino-26652420</a>
                 </div>
             </div>
         </div>
 
         <button id="downloadPDF" onclick="window.print()">⬇️ Baixar PDF</button>
 
-        <div class="section">
+        <!-- SOBRE MIM com classe específica e sem estilos inline -->
+        <div class="section section--sobre">
             <div class="section-title">Sobre Mim</div>
-            <p style="font-size: 13px; margin: 0;">
-                Profissional com mais de 10 anos de experiência em Tecnologia da Informação, atuando em infraestrutura, redes, telefonia e segurança da informação. Ao longo da carreira, participei de projetos estratégicos que aumentaram a eficiência operacional e reduziram custos, incluindo implantação de soluções corporativas, gestão de contratos e melhoria contínua de processos.
+            <p>
+                Profissional com mais de 10 anos de experiência em Tecnologia da Informação, atuando em infraestrutura,
+                redes, telefonia e segurança da informação. Ao longo da carreira, participei de projetos estratégicos
+                que aumentaram a eficiência operacional e reduziram custos, incluindo implantação de soluções corporativas,
+                gestão de contratos e melhoria contínua de processos.
             </p>
-            <p style="font-size: 13px; margin-top: 6px;">
-                Possuo ampla experiência na administração de Active Directory, Office 365, SharePoint, Cisco CUCM e redes gerenciáveis, com sólida base em protocolos TCP/IP. Sou pós-graduado em Logística e Banco de Dados e certificado em Cybersecurity (CCST), Lean Six Sigma e ITIL.
-Meu diferencial está na capacidade de integrar conhecimento técnico e visão estratégica, desenvolvendo soluções seguras, escaláveis e alinhadas aos objetivos do negócio. Estou em busca de oportunidades para aplicar essa expertise em ambientes dinâmicos e orientados à inovação.
+            <p>
+                Possuo ampla experiência na administração de Active Directory, Office 365, SharePoint, Cisco CUCM e redes
+                gerenciáveis, com sólida base em protocolos TCP/IP. Sou pós-graduado em Logística e Banco de Dados e
+                certificado em Cybersecurity (CCST), Lean Six Sigma e ITIL. Meu diferencial está na capacidade de integrar
+                conhecimento técnico e visão estratégica, desenvolvendo soluções seguras, escaláveis e alinhadas aos objetivos
+                do negócio. Estou em busca de oportunidades para aplicar essa expertise em ambientes dinâmicos e orientados
+                à inovação.
             </p>
         </div>
 
         <div class="section">
             <div class="section-title">Experiência Profissional</div>
+
             <p class="job-title">Adient Bancos Automotivos</p>
             <p class="job-meta"><strong>Cargo:</strong> Analista de Suporte Técnico | <em>01/2025 - Atual</em></p>
             <ul>
@@ -100,27 +254,46 @@ Meu diferencial está na capacidade de integrar conhecimento técnico e visão e
         <div class="section">
             <div class="section-title">Competências</div>
             <div class="skills">
-                <div class="skill">Active Directory</div><div class="skill">Office 365</div><div class="skill">SharePoint</div><div class="skill">Windows Server</div>
-                <div class="skill">TCP/IP</div><div class="skill">Cisco CUCM</div><div class="skill">VoIP</div><div class="skill">ITIL</div><div class="skill">Tenable</div>
-                <div class="skill">Gestão de Estoque</div><div class="skill">Armazenagem</div><div class="skill">Movimentação de Mercadorias</div><div class="skill">Inventário Cíclico</div>
-                <div class="skill">Logística Reversa</div><div class="skill">NF-e & CT-e</div><div class="skill">Manifestos & Romaneios</div><div class="skill">APISUL</div>
-                <div class="skill">Picking by Light (Knapp)</div><div class="skill">Operação de Empilhadeira</div><div class="skill">Abastecimento Fabril</div>
-                <div class="skill">SAP R/3</div><div class="skill">ERP Orion</div>
+                <!-- TI -->
+                <div class="skill">Active Directory</div>
+                <div class="skill">Office 365</div>
+                <div class="skill">SharePoint</div>
+                <div class="skill">Windows Server</div>
+                <div class="skill">TCP/IP</div>
+                <div class="skill">Cisco CUCM</div>
+                <div class="skill">VoIP</div>
+                <div class="skill">ITIL</div>
+                <div class="skill">Tenable</div>
+
+                <!-- Logística -->
+                <div class="skill">Gestão de Estoque</div>
+                <div class="skill">Armazenagem</div>
+                <div class="skill">Movimentação de Mercadorias</div>
+                <div class="skill">Inventário Cíclico</div>
+                <div class="skill">Logística Reversa</div>
+                <div class="skill">NF-e & CT-e</div>
+                <div class="skill">Manifestos & Romaneios</div>
+                <div class="skill">APISUL</div>
+                <div class="skill">Picking by Light (Knapp)</div>
+                <div class="skill">Operação de Empilhadeira</div>
+                <div class="skill">Abastecimento Fabril</div>
+                <div class="skill">SAP R/3</div>
+                <div class="skill">ERP Orion</div>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">Formação Acadêmica</div>
             <p style="font-size: 13px; margin: 0;">
-                <strong>Unisenai/PR</strong> — Pós-graduação em Gerenciamento e Processos Logísticos<br>
+                <strong>Unisenai/PR</strong> — Pós-graduação em Gerenciamento e Processos Logísticos<br/>
                 <span class="subinfo">Início: 01/2023 • Conclusão: 12/2023</span>
             </p>
             <p style="font-size: 13px; margin: 10px 0 0;">
-                <strong>Faculdade FAEL</strong> — Pós-graduação em Administração de Banco de Dados<br>
+                <strong>Faculdade FAEL</strong> — Pós-graduação em Administração de Banco de Dados<br/>
                 <span class="subinfo">Início: 2021 • Conclusão: 2022</span>
             </p>
             <p style="font-size: 13px; margin: 10px 0 0;">
-                <strong>Faculdade das Indústrias</strong> — Bacharelado em Sistemas de Informação<br>
+                <strong>Faculdade das Indústrias</strong> — Bacharelado em Sistemas de Informação<br/>
                 <span class="subinfo">Início: 2009 • Conclusão: 2013</span>
             </p>
         </div>
@@ -133,17 +306,3 @@ Meu diferencial está na capacidade de integrar conhecimento técnico e visão e
                 <li><strong>PCAP: Programming Essentials in Python</strong> — 2023</li>
                 <li><strong>Fundamentos de ITIL</strong> — 2020</li>
                 <li><strong>Cisco CCNAv7 – Introduction to Networks</strong> — 2021</li>
-                <li><strong>Treinamento USP – Equipamentos Rede Huawei</strong> — 2021</li>
-                <li><strong>Power BI</strong> — Em curso</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Links</div>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/ademilson-albino-26652420/" target="_blank">LinkedIn</a></li>
-            </ul>
-        </div>
-    </div>
-</body>
-</html>
