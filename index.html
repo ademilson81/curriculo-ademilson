@@ -36,7 +36,7 @@
       border-bottom:1px solid var(--border);
       padding-bottom:16px; margin-bottom:22px;
     }
-    .avatar{width:96px;height:96px;border-radius:999px;overflow:hidden;border:2px solid var(--border);background:#f3f4f6}
+    .avatar{width:96px;height:96px;border-radius:999px;overflow:hidden;border:2px solid var(--border)}
     .avatar img{width:100%;height:100%;object-fit:cover;display:block}
     h1{margin:0;color:var(--h);font-size:28px}
     .role{margin:6px 0 10px;font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
@@ -74,7 +74,6 @@
 
     /* Small screens */
     @media (max-width:640px){
-      header.top{flex-direction: column; align-items: flex-start;}
       .container{padding:24px}
       .avatar{width:80px;height:80px}
     }
@@ -83,9 +82,14 @@
 <body>
   <main class="container" role="main" aria-label="Currículo de Ademilson Albino">
 
+    <!-- HEADER -->
     <header class="top">
       <div class="avatar">
-        <img src="foto-perfil.jpeg" alt="Foto de Ademilson Albino">
+        <!-- Se sua foto estiver na raiz (conforme seu repositório), use: -->
+        foto-perfil.jpeg
+        <!-- Se preferir a sintaxe <img>, troque a linha acima por:
+        <img src="foto-perfil.jpeg" alt="Foto de perfil de Ademilson Albino" width="96" height="96" loading="lazy" decoding="async" />
+        -->
       </div>
 
       <div>
@@ -96,93 +100,3 @@
 
         <p class="contact">
           📞 <a href="tel:+5541997418066">(+55) 41 99741-8066</a><br>
-          📧 <a href="mailto:ademilson.albino@gmail.com">ademilson.albino@gmail.com</a><br>
-          💼 <a href="https://www.linkedin.com/in/ademilson-albino-26652420/" target="_blank" rel="noopener">linkedin.com/in/ademilson-albino-26652420</a><br>
-          🌐 <a href="https://ademilson81.github.io/curriculo-ademilson/" target="_blank" rel="noopener">ademilson81.github.io/curriculo-ademilson</a><br>
-          📍 Curitiba, PR
-        </p>
-      </div>
-    </header>
-
-    <button id="downloadPDF" onclick="window.print()" aria-label="Baixar versão em PDF">⬇️ Baixar PDF</button>
-
-    <section class="section" aria-labelledby="sobre">
-      <h2 id="sobre" class="section-title">Sobre</h2>
-      <p>
-        Profissional de Suporte e Infra com experiência em ambientes Microsoft e redes: Active Directory/Entra ID, Windows Server, Microsoft 365 (Exchange Online, Teams, SharePoint), Intune/MDM, SCCM e troubleshooting de TCP/IP, DNS/DHCP, VPN e VLAN. Atuação em N1/N2 com foco em SLA, experiência do usuário e ITIL.
-      </p>
-      <p>
-        Resultados: redução de 28% no MTTR ao padronizar procedimentos e scripts; aumento de 17 p.p. no CSAT com melhoria do fluxo de atendimento; disponibilidade &gt; 99,5% em serviços Microsoft com rotinas de patching, backup e monitoramento.
-      </p>
-    </section>
-
-    <section class="section" aria-labelledby="xp">
-      <h2 id="xp" class="section-title">Experiência Profissional</h2>
-
-      <article>
-        <h3 class="job-title">Adient — Analista de Suporte de Help Desk</h3>
-        <p class="job-meta"><strong>Período:</strong> jan/2025 – mar/2025 · São José dos Pinhais, PR</p>
-        <ul>
-          <li>Suporte N1/N2 para ~450 usuários via ServiceNow (remoto/presencial).</li>
-          <li>Administração de AD/Entra (contas, grupos, permissões, GPOs básicas).</li>
-          <li>Suporte a Microsoft 365 (Exchange, Teams, SharePoint) e Windows 10/11.</li>
-          <li>Configuração e troubleshooting de TCP/IP, DNS/DHCP e VPN.</li>
-          <li>Gestão de dispositivos via Intune (inventário, deploy de apps e políticas).</li>
-          <li><strong>Resultados:</strong> MTTR ↓ ~22% e SLA &gt; 96% no período.</li>
-        </ul>
-      </article>
-
-      <article style="margin-top:24px">
-        <h3 class="job-title">FIEP — Analista de TI / Telecomunicações</h3>
-        <p class="job-meta"><strong>Período:</strong> out/2014 – dez/2024 · Curitiba, PR</p>
-
-        <div class="subhead">Infraestrutura & Microsoft</div>
-        <ul>
-          <li>Administração de AD, Windows Server 2012/2016/2019, Exchange Online, SharePoint e Teams; backup/restore e permissões.</li>
-        </ul>
-
-        <div class="subhead">Redes</div>
-        <ul>
-          <li>Configuração e troubleshooting de VLAN, DHCP, DNS, TCP/IP, IPv4/IPv6 e Wi‑Fi corporativo.</li>
-        </ul>
-
-        <div class="subhead">Suporte & Governança</div>
-        <ul>
-          <li>Atendimento remoto/local com TeamViewer, SCCM e AnyDesk; práticas ITIL/COBIT e criação de KBs internas.</li>
-        </ul>
-
-        <div class="subhead">Telefonia/VoIP</div>
-        <ul>
-          <li>Administração de Cisco CUCM, Jabber, URA, roteamento e integração com PABX Dígitro; gestão de telefonia móvel.</li>
-        </ul>
-
-        <div class="subhead">Resultados</div>
-        <ul>
-          <li>Modernização da infraestrutura de comunicação e alta disponibilidade de serviços críticos.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="section" aria-labelledby="cursos">
-      <h2 id="cursos" class="section-title">Formação e Qualificações</h2>
-      
-      <article style="margin-bottom: 16px;">
-        <h3 class="job-title">Análise e Desenvolvimento de Sistemas</h3>
-        <p class="job-meta">Faculdade de Tecnologia Eniac · Graduação</p>
-      </article>
-
-      <div class="subhead">Certificações e Especializações</div>
-      <div class="skills" style="margin-top: 10px;">
-        <span class="chip">Microsoft 365 (MS-900)</span>
-        <span class="chip">Azure Fundamentals (AZ-900)</span>
-        <span class="chip">Fundamentos de Redes (CCNA)</span>
-        <span class="chip">ITIL® 4 Foundation</span>
-        <span class="chip">Windows Server 2019/2022</span>
-        <span class="chip">Cisco CUCM & VoIP</span>
-        <span class="chip">Active Directory & Entra ID</span>
-      </div>
-    </section>
-
-  </main>
-</body>
-</html>
