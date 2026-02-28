@@ -2,78 +2,47 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ademilson Albino — Analista de TI Júnior (Suporte & Infra)</title>
-
-  <meta name="description" content="Analista de TI Júnior focado em Suporte & Infra: Active Directory/Entra ID, Windows Server, Microsoft 365, Intune, TCP/IP, DNS/DHCP, VPN, ITIL. Histórico de ↓MTTR, ↑SLA e otimização de VoIP (Cisco CUCM).">
+  <meta name="description" content="Suporte & Infra: AD/Entra, Microsoft 365, Windows Server, Intune, Redes. Resultados: ↓MTTR, ↑SLA, ↑CSAT.">
 
   <style>
     :root{
-      --text:#0f172a;      /* slate-900 */
-      --muted:#4b5563;     /* gray-600 */
-      --subtle:#6b7280;    /* gray-500 */
-      --border:#e5e7eb;    /* gray-200 */
-      --accent:#1f2937;    /* gray-800 for headings */
-      --accent2:#2563eb;   /* blue-600 */
-      --chip-bg:#eef2ff;   /* indigo-50 */
-      --chip-fg:#3730a3;   /* indigo-800 */
-      --bg:#ffffff;
+      --text:#0f172a; --muted:#4b5563; --border:#e5e7eb;
+      --h:#111827; --accent:#2563eb; --bg:#fff;
+      --chip-bg:#eef2ff; --chip-fg:#3730a3;
     }
-
     html,body{margin:0;padding:0}
-    body{
-      font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial,Helvetica,sans-serif;
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.55;
-    }
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,Helvetica,sans-serif;color:var(--text);background:var(--bg);line-height:1.55}
 
-    .container{
-      max-width:960px;
-      margin:32px auto 48px;
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:16px;
-      box-shadow:0 18px 45px rgba(2,8,23,.08);
-      padding:32px 40px;
-    }
+    .container{max-width:960px;margin:32px auto 48px;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:0 18px 45px rgba(2,8,23,.08);padding:32px 40px}
 
-    /* Header */
-    header.top{
-      display:flex; gap:20px; align-items:center;
-      border-bottom:1px solid var(--border);
-      padding-bottom:16px; margin-bottom:22px;
-    }
-    .avatar{width:96px;height:96px;border-radius:999px;overflow:hidden;border:2px solid var(--border);flex:0 0 auto}
+    header.top{display:flex;gap:20px;align-items:center;border-bottom:1px solid var(--border);padding-bottom:16px;margin-bottom:22px}
+    .avatar{width:96px;height:96px;border-radius:999px;overflow:hidden;border:2px solid var(--border)}
     .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-    h1{margin:0;font-size:28px;color:var(--accent)}
-    .role{margin:6px 0 10px;font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent2)}
-    .contact{font-size:13px;color:var(--subtle)}
-    .contact a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #cbd5e1}
-    .contact a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+    h1{margin:0;color:var(--h);font-size:28px}
+    .role{margin:6px 0 10px;font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+    .contact{font-size:13px;color:var(--muted)}
+    .contact a{color:var(--h);text-decoration:none;border-bottom:1px dotted #cbd5e1}
+    .contact a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 
-    /* Sections */
     .section{margin:24px 0}
-    .section-title{margin:0 0 10px;font-size:13px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.16em}
-    .job-title{margin:0;font-size:16px;font-weight:800;color:var(--accent)}
-    .job-meta{margin:4px 0 10px;font-size:12px;color:var(--subtle)}
+    .section-title{margin:0 0 10px;font-size:13px;font-weight:800;color:var(--h);text-transform:uppercase;letter-spacing:.16em}
+    .job-title{margin:0;font-size:16px;font-weight:800;color:var(--h)}
+    .job-meta{margin:4px 0 10px;font-size:12px;color:var(--muted)}
     p{margin:0 0 8px}
     ul{margin:8px 0 0;padding-left:18px}
     li{margin:6px 0}
-
-    /* Subheads inside Experience */
     .subhead{font-size:12.5px;color:var(--muted);font-weight:700;margin-top:10px}
-
-    /* Chips */
     .skills{display:flex;flex-wrap:wrap;gap:8px}
     .chip{padding:6px 12px;border-radius:999px;background:var(--chip-bg);color:var(--chip-fg);font-size:12px;border:1px solid rgba(79,70,229,.25)}
 
-    /* Print */
+    #downloadPDF{display:inline-flex;align-items:center;gap:6px;margin-bottom:12px;padding:8px 14px;background:#111827;color:#fff;border:none;border-radius:999px;font-size:12px;font-weight:700;cursor:pointer}
     @media print{
+      #downloadPDF{display:none}
       .container{margin:0;border-radius:0;box-shadow:none;max-width:100%}
       a:after{content:" (" attr(href) ")";font-size:11px;color:#555}
     }
-
     @media (max-width:640px){
       .container{padding:24px}
       .avatar{width:80px;height:80px}
@@ -85,27 +54,28 @@
 
     <header class="top">
       <div class="avatar">
-        <!-- IMPORTANTE: garanta que o arquivo e a extensão abaixo existem no repositório exatamente com esse nome -->
-        <img src="foto-perfil.jpeg" alt="Foto de perfil de Ademilson Albino">
+        foto-perfil.jpeg
       </div>
       <div>
         <h1>Ademilson Albino</h1>
-        <p class="role">Analista de TI Júniorws Server • Intune • TCP/IP/DNS/DHCP/VPN • ITIL • Cisco CUCM</p>
+        <p class="role">Analista de TI Júnior (Suporte & Infra) — AD/Entra • Microsoft 365 • Windows Server • Intune • TCP/IP/DNS/DHCP/VPN • ITIL • Cisco CUCM</p>
         <p class="contact">
           📞 tel:+5541997418066(+55) 41 99741‑8066</a><br>
           📧 <a href="mailto:ademilson.albino@gmail.com">ademilson.albino@gmail.com</a><br>
-          💼 <a href="https://www.linkedin.com/in/ademilson-albino-26652420/" target="_blank" rel="noopener">linkedin.com/in/ademilson-albino-26652420</a><br>
-          🌐 <a href="https://ademilson81.github.io/curriculo-ademilson/" target="_blank" rel="noopener">ademilson81.github.io/curriculo-ademilson</a><br>
+          💼 LinkedIn:
+          <a href="https://www.linkedin.com/in/ademilson-albino-26652420/" target="_blank" rel="noopener">linkedin.com/in/ademilson   https://ademilson81.github.io/curriculo-ademilson/ademilson81.github.io/curriculo-ademilson</a><br>
           📍 Curitiba, PR
         </p>
       </div>
     </header>
 
+    <button id="downloadPDF" onclick="window.print()" aria-label="Baixar versão em PDF">⬇️ Baixar PDF</button>
+
     <!-- SOBRE -->
     <section class="section" aria-labelledby="sobre">
       <h2 id="sobre" class="section-title">Sobre</h2>
-      <p>Profissional deory/Entra ID</strong>, <strong>Windows Server</strong>, <strong>Microsoft 365</strong> (Exchange Online, Teams, SharePoint), <strong>Intune/MDM</strong>, <strong>SCCM</strong> e troubleshooting de <strong>TCP/IP, DNS/DHCP, VPN</strong> e <strong>VLAN</strong>. Atuação em <strong>N1/N2</strong> com foco em <strong>SLA</strong>, experiência do usuário e <strong>ITIL</strong>.</p>
-      <p><strong>Resultados</strong>: ↓ <strong>28%</strong> no MTTR com padronização e scripts; ↑ <strong>17 p.p.</strong> no CSAT com melhoria de fluxo; disponibilidade <strong>&gt; 99,5%</strong> em serviços Microsoft por meio de patching/backup/monitoramento.</p>
+      <p>Profissional de Suporte e Infra com experiência em ambientes Microsoft e redes: Active Directory/Entra ID, Windows Server, Microsoft 365 (Exchange Online, Teams, SharePoint), Intune/MDM, SCCM e troubleshooting de TCP/IP, DNS/DHCP, VPN e VLAN. Atuação em N1/N2 com foco em SLA, experiência do usuário e ITIL.</p>
+      <p>Resultados: redução de 28% no MTTR ao padronizar procedimentos e scripts; aumento de 17 p.p. no CSAT com melhoria do fluxo de atendimento; disponibilidade &gt; 99,5% em serviços Microsoft com rotinas de patching, backup e monitoramento.</p>
     </section>
 
     <!-- EXPERIÊNCIA -->
@@ -116,12 +86,12 @@
         <h3 class="job-title">Adient — Analista de Suporte de Help Desk</h3>
         <p class="job-meta"><strong>Período:</strong> jan/2025 – mar/2025 · São José dos Pinhais, PR</p>
         <ul>
-          <li>Suporte <strong>N1/N2</strong> para ~450 usuários via <strong>ServiceNow</strong> (remoto/presencial).</li>
-          <li>Administração de <strong>AD/Entra</strong> (contas, grupos, permissões, GPOs básicas).</li>
-          <li>Suporte a <strong>Microsoft 365</strong> (Exchange, Teams, SharePoint) e <strong>Windows 10/11</strong>.</li>
-          <li>Configuração e troubleshooting de <strong>TCP/IP, DNS/DHCP, VPN</strong>.</li>
-          <li>Gestão de dispositivos via <strong>Intune</strong> (inventário, deploy de apps, políticas).</li>
-          <li><strong>Resultados:</strong> MTTR ↓ ~22% e <strong>SLA &gt; 96%</strong> no período.</li>
+          <li>Suporte N1/N2 para ~450 usuários via ServiceNow (remoto/presencial).</li>
+          <li>Administração de AD/Entra (contas, grupos, permissões, GPOs básicas).</li>
+          <li>Suporte a Microsoft 365 (Exchange, Teams, SharePoint) e Windows 10/11.</li>
+          <li>Configuração e troubleshooting de TCP/IP, DNS/DHCP e VPN.</li>
+          <li>Gestão de dispositivos via Intune (inventário, deploy de apps e políticas).</li>
+          <li><strong>Resultados:</strong> MTTR ↓ ~22% e SLA &gt; 96% no período.</li>
         </ul>
       </article>
 
@@ -131,32 +101,32 @@
 
         <div class="subhead">Infraestrutura & Microsoft</div>
         <ul>
-          <li>Administração de <strong>AD</strong>, <strong>Windows Server 2012/2016/2019</strong>, <strong>Exchange Online</strong>, <strong>SharePoint</strong>, <strong>Teams</strong>; backup/restore e permissões.</li>
+          <li>Administração de AD, Windows Server 2012/2016/2019, Exchange Online, SharePoint e Teams; backup/restore e permissões.</li>
         </ul>
 
         <div class="subhead">Redes</div>
         <ul>
-          <li>Configuração e troubleshooting de <strong>VLAN</strong>, <strong>DHCP</strong>, <strong>DNS</strong>, <strong>TCP/IP</strong>, <strong>IPv4/IPv6</strong> e Wi‑Fi corporativo.</li>
+          <li>Configuração e troubleshooting de VLAN, DHCP, DNS, TCP/IP, IPv4/IPv6 e Wi‑Fi corporativo.</li>
         </ul>
 
         <div class="subhead">Suporte & Governança</div>
         <ul>
-          <li>Atendimento remoto/local com <strong>TeamViewer</strong>, <strong>SCCM</strong> e <strong>AnyDesk</strong>; práticas <strong>ITIL/COBIT</strong> e criação de KBs internas.</li>
+          <li>Atendimento remoto/local com TeamViewer, SCCM e AnyDesk; práticas ITIL/COBIT e criação de KBs internas.</li>
         </ul>
 
         <div class="subhead">Telefonia/VoIP</div>
         <ul>
-          <li>Administração de <strong>Cisco CUCM</strong>, <strong>Jabber</strong>, <strong>URA</strong>, roteamento e integração com <strong>PABX Dígitro</strong>; telefonia móvel.</li>
+          <li>Administração de Cisco CUCM, Jabber, URA, roteamento e integração com PABX Dígitro; gestão de telefonia móvel.</li>
         </ul>
 
         <div class="subhead">Projetos</div>
         <ul>
-          <li>Implantação de <strong>Azure Labs</strong>; implementação de <strong>Omnichannel</strong>; internalização de <strong>Contact Center (0800)</strong>.</li>
+          <li>Implantação de Azure Labs; implementação de Omnichannel; internalização de Contact Center (0800).</li>
         </ul>
 
         <div class="subhead">Resultados</div>
         <ul>
-          <li>↓ <strong>32%</strong> nos custos de telefonia; disponibilidade <strong>&gt; 99,5%</strong> em serviços Microsoft; reabertura de chamados ↓ <strong>20%</strong> com padronização e KBs.</li>
+          <li>Redução de 32% nos custos de telefonia; disponibilidade &gt; 99,5% em serviços Microsoft; reabertura de chamados ↓ 20% com padronização e KBs.</li>
         </ul>
       </article>
     </section>
@@ -176,6 +146,15 @@
         <span class="chip" role="listitem">Backup/Restore • MFA/SSO</span>
         <span class="chip" role="listitem">Hyper‑V</span>
       </div>
+    </section>
+
+    <!-- FORMAÇÃO -->
+    <section class="section" aria-labelledby="formacao">
+      <h2 id="formacao" class="section-title">Formação Acadêmica</h2>
+      <p style="margin:0"><strong>Unisenai/PR</strong> — Pós‑graduação em Gerenciamento e Processos Logísticos — 2023</p>
+      <p style="margin:8px 0 0"><strong>Faculdade FAEL</strong> — Pós‑graduação em Administração de Banco de Dados — 2021–2022</p>
+      <p style="margin:8px 0 0"><strong>Faculdade da Indústria</strong> — Especialização em Gerenciamento de Projetos — 2019–2021</p>
+      <p style="margin:8px 0 0"><strong>Faculdade das Indústrias</strong> — Bacharelado em Sistemas de Informação — 2009–2013</p>
     </section>
 
   </main>
