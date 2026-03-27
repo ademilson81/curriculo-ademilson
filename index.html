@@ -1,235 +1,224 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ademilson Albino — Analista de TI Júnior (Suporte & Infra)</title>
+  <meta name="description" content="Suporte & Infra: AD/Entra, Microsoft 365, Windows Server, Intune e Redes. Resultados: redução de MTTR, aumento de SLA/CSAT.">
 
-<title>Ademilson Albino — Analista de TI Júnior (Suporte & Infra)</title>
-<meta name="description" content="Suporte & Infra: AD/Entra, Microsoft 365, Windows Server, Intune e Redes.">
+  <style>
+    :root{
+      --text:#0f172a;      /* slate-900 */
+      --muted:#4b5563;     /* gray-600 */
+      --border:#e5e7eb;    /* gray-200 */
+      --h:#111827;         /* title color */
+      --accent:#2563eb;    /* blue-600 */
+      --bg:#ffffff;
+      --chip-bg:#eef2ff;   /* indigo-50 */
+      --chip-fg:#3730a3;   /* indigo-800 */
+    }
 
-<style>
-:root{
-  --text:#0f172a;
-  --muted:#4b5563;
-  --border:#e5e7eb;
-  --h:#111827;
-  --accent:#2563eb;
-  --bg:#ffffff;
-  --chip-bg:#eef2ff;
-  --chip-fg:#3730a3;
-}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,Helvetica,sans-serif;
+      color:var(--text); background:var(--bg); line-height:1.55;
+      -webkit-print-color-adjust: exact;
+    }
 
-html,body{margin:0;padding:0}
+    .container{
+      max-width:960px; margin:32px auto 48px; background:#fff;
+      border:1px solid var(--border); border-radius:16px;
+      box-shadow:0 18px 45px rgba(2,8,23,.08); padding:32px 40px;
+    }
 
-body{
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,Helvetica,sans-serif;
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.55;
-  -webkit-print-color-adjust: exact;
-}
+    /* Header */
+    header.top{
+      display:flex; gap:20px; align-items:center;
+      border-bottom:1px solid var(--border);
+      padding-bottom:16px; margin-bottom:22px;
+    }
+    .avatar{width:96px;height:96px;border-radius:999px;overflow:hidden;border:2px solid var(--border);background:#f3f4f6}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;color:var(--h);font-size:28px}
+    .role{margin:6px 0 10px;font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+    .contact{font-size:13px;color:var(--muted)}
+    .contact a{color:var(--h);text-decoration:none;border-bottom:1px dotted #cbd5e1}
+    .contact a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 
-/* ====== CONTAINER ====== */
-.container{
-  max-width:960px;
-  margin:32px auto 48px;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:16px;
-  box-shadow:0 18px 45px rgba(2,8,23,.08);
-  padding:32px 40px;
-}
+    /* Sections */
+    .section{margin:24px 0}
+    .section-title{margin:0 0 10px;font-size:13px;font-weight:800;color:var(--h);text-transform:uppercase;letter-spacing:.16em}
+    .job-title{margin:0;font-size:16px;font-weight:800;color:var(--h)}
+    .job-meta{margin:4px 0 10px;font-size:12px;color:var(--muted)}
+    
+    /* AJUSTE: Texto Justificado */
+    p{
+      margin:0 0 12px;
+      text-align: justify;
+      hyphens: auto;
+    }
+    ul{margin:8px 0 0;padding-left:18px}
+    li{
+      margin:6px 0;
+      text-align: justify;
+    }
+    
+    .subhead{font-size:12.5px;color:var(--muted);font-weight:700;margin-top:10px}
 
-/* ====== HEADER ====== */
-header.top{
-  display:flex;
-  gap:20px;
-  align-items:center;
-  border-bottom:1px solid var(--border);
-  padding-bottom:16px;
-  margin-bottom:22px;
-}
+    /* Chips */
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{padding:6px 12px;border-radius:999px;background:var(--chip-bg);color:var(--chip-fg);font-size:12px;border:1px solid rgba(79,70,229,.25)}
 
-.avatar{
-  width:96px;
-  height:96px;
-  border-radius:999px;
-  overflow:hidden;
-  border:2px solid var(--border);
-  background:#f3f4f6
-}
+    /* PDF button */
+    #downloadPDF{
+      display:inline-flex;align-items:center;gap:6px;margin-bottom:12px;
+      padding:8px 14px;background:#111827;color:#fff;border:none;border-radius:999px;
+      font-size:12px;font-weight:700;cursor:pointer;transition: opacity 0.2s;
+    }
+    #downloadPDF:hover{opacity: 0.9;}
 
-.avatar img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block
-}
+    /* Print Adjustment */
+    @media print{
+      @page { margin: 1.5cm; }
+      #downloadPDF{display:none}
+      body { background: #fff; font-size: 11pt; }
+      .container{margin:0;border:none;box-shadow:none;max-width:100%;padding:0}
+      .avatar{border: 1px solid #eee;}
+      a{text-decoration: none; color: var(--text);}
+    }
 
-h1{margin:0;font-size:28px;color:var(--h)}
-
-.role{
-  margin:6px 0 10px;
-  font-size:14px;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:.04em;
-  color:var(--accent)
-}
-
-.contact{font-size:13px;color:var(--muted)}
-.contact a{color:var(--h);text-decoration:none}
-
-/* ====== SECTIONS ====== */
-.section{margin:24px 0}
-
-.section-title{
-  margin:0 0 10px;
-  font-size:13px;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-}
-
-.job-title{margin:0;font-size:16px;font-weight:800}
-.job-meta{margin:4px 0 10px;font-size:12px;color:var(--muted)}
-
-p{
-  margin:0 0 12px;
-  text-align:justify;
-}
-
-ul{margin:8px 0 0;padding-left:18px}
-li{margin:6px 0;text-align:justify}
-
-.subhead{
-  font-size:12.5px;
-  color:var(--muted);
-  font-weight:700;
-  margin-top:10px
-}
-
-/* ====== CHIPS ====== */
-.skills{display:flex;flex-wrap:wrap;gap:8px}
-.chip{
-  padding:6px 12px;
-  border-radius:999px;
-  background:var(--chip-bg);
-  color:var(--chip-fg);
-  font-size:12px;
-  border:1px solid rgba(79,70,229,.25)
-}
-
-/* ====== BOTÃO PDF ====== */
-#downloadPDF{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  margin-bottom:12px;
-  padding:8px 14px;
-  background:#111827;
-  color:#fff;
-  border:none;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:700;
-  cursor:pointer;
-}
-
-/* ===================================================== */
-/* ==================== PRINT (PDF) ==================== */
-/* ===================================================== */
-@media print{
-
-@page{
-  size:A4;
-  margin:1.2cm;
-}
-
-body{
-  width:210mm;
-  font-size:11pt;
-  background:#fff;
-}
-
-#downloadPDF{display:none}
-
-.container{
-  max-width:none;
-  width:100%;
-  padding:0;
-  margin:0;
-  border:none;
-  box-shadow:none;
-}
-
-header.top{
-  display:block;
-}
-
-.avatar{
-  float:right;
-  margin:0 0 12px 12px;
-  border:1px solid #eee;
-}
-
-/* CORREÇÃO DEFINITIVA DO TEXTO */
-p, li{
-  text-align:justify;
-  hyphens:none;
-  -webkit-hyphens:none;
-  word-break:normal;
-  overflow-wrap:break-word;
-}
-
-/* Evita cortes feios */
-section, article, ul, li{
-  break-inside:avoid;
-  page-break-inside:avoid;
-}
-
-a{
-  color:#111;
-  text-decoration:none;
-}
-}
-
-/* ====== MOBILE ====== */
-@media (max-width:640px){
-  .container{padding:24px}
-  header.top{flex-direction:column;align-items:flex-start}
-  p,li{text-align:left}
-}
-</style>
+    /* Small screens */
+    @media (max-width:640px){
+      .container{padding:24px}
+      header.top{flex-direction: column; align-items: flex-start; text-align: left;}
+      .avatar{width:80px;height:80px}
+      p, li { text-align: left; } /* Justificado pode ficar estranho em telas muito pequenas */
+    }
+  </style>
 </head>
-
 <body>
-<main class="container">
+  <main class="container" role="main" aria-label="Currículo de Ademilson Albino">
 
-<header class="top">
-  <div class="avatar">
-    <img src="foto-perfil.jpeg" alt="Foto de perfil de Ademilson Albino">
-  </div>
+    <header class="top">
+      <div class="avatar">
+        <img src="foto-perfil.jpeg" alt="Foto de perfil de Ademilson Albino" />
+      </div>
 
-  <div>
-    <h1>Ademilson Albino</h1>
-    <p class="role">
-      Analista de TI Júnior (Suporte & Infra) — AD/Entra • Microsoft 365 • Windows Server • Intune • Redes
-    </p>
+      <div>
+        <h1>Ademilson Albino</h1>
+        <p class="role">
+          Analista de TI Júnior (Suporte & Infra) — AD/Entra • Microsoft 365 • Windows Server • Intune • TCP/IP/DNS/DHCP/VPN • ITIL • Cisco CUCM
+        </p>
 
-    <p class="contact">
-      📞 <a href="tel:+5541997418066">(+55) 41 99741-8066</a><br>
-      📧 <a href="mailto:ademilson.albino@gmail.com">ademilson.albino@gmail.com</a><br>
-      💼 <a href="https://www.linkedin.com/in/ademilson-albino-26652420/" target="_blank">LinkedIn</a><br>
-      🌐 <a href="https://ademilson81.github.io/curriculo-ademilson/" target="_blank">Site</a><br>
-      📍 Curitiba, PR
-    </p>
-  </div>
-</header>
+        <p class="contact">
+          📞 <a href="tel:+5541997418066">(+55) 41 99741-8066</a><br>
+          📧 <a href="mailto:ademilson.albino@gmail.com">ademilson.albino@gmail.com</a><br>
+          💼 <a href="https://www.linkedin.com/in/ademilson-albino-26652420/" target="_blank" rel="noopener">linkedin.com/in/ademilson-albino-26652420</a><br>
+          🌐 <a href="https://ademilson81.github.io/curriculo-ademilson/" target="_blank" rel="noopener">ademilson81.github.io/curriculo-ademilson</a><br>
+          📍 Curitiba, PR
+        </p>
+      </div>
+    </header>
 
-<button id="downloadPDF" onclick="window.print()">⬇️ Baixar PDF</button>
+    <button id="downloadPDF" onclick="window.print()" aria-label="Baixar versão em PDF">⬇️ Baixar PDF</button>
 
-<!-- O RESTANTE DO HTML DE CONTEÚDO PERMANECE IGUAL AO SEU -->
-</main>
+    <section class="section" aria-labelledby="sobre">
+      <h2 id="sobre" class="section-title">Sobre</h2>
+      <p>
+        Profissional de Suporte e Infraestrutura com mais de 10 anos de experiência em ambientes Microsoft e redes corporativas. Atuo com administração de Active Directory/Entra ID, Microsoft 365 (Exchange Online, Teams, OneDrive e SharePoint), Windows Server, infraestrutura de redes (TCP/IP, DNS/DHCP, VLAN, VPN) e gestão de dispositivos via Intune/MDM e SCCM.
+      </p>
+      <p>
+        Tenho sólida vivência em ambientes corporativos com atendimento N1/N2, resolução estruturada de problemas, governança baseada em ITIL, documentação técnica e melhoria contínua. Meu foco é sempre garantir estabilidade, segurança, disponibilidade e uma experiência de usuário consistente.
+      </p>
+      <p>
+        Sou reconhecido pela capacidade de identificar causas-raiz, padronizar processos e entregar soluções eficientes que reduzem retrabalho e evitam reincidências. Tenho experiência também com Cisco CUCM/VoIP, telefonia móvel/corporativa, ferramentas de suporte remoto e integrações de serviços.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="xp">
+      <h2 id="xp" class="section-title">Experiência Profissional</h2>
+
+      <article>
+        <h3 class="job-title">Adient — Analista de Suporte de Help Desk</h3>
+        <p class="job-meta"><strong>Período:</strong> jan/2025 – mar/2025 · São José dos Pinhais, PR</p>
+        <ul>
+          <li>Suporte N1/N2 para ~450 usuários via ServiceNow (remoto/presencial).</li>
+          <li>Administração de AD/Entra (contas, grupos, permissões, GPOs básicas).</li>
+          <li>Suporte a Microsoft 365 (Exchange, Teams, SharePoint) e Windows 10/11.</li>
+          <li>Configuração e troubleshooting de TCP/IP, DNS/DHCP e VPN.</li>
+          <li>Gestão de dispositivos via Intune (inventário, deploy de apps e políticas).</li>
+          
+        </ul>
+      </article>
+
+      <article style="margin-top:24px">
+        <h3 class="job-title">FIEP — Analista de TI / Telecomunicações</h3>
+        <p class="job-meta"><strong>Período:</strong> out/2014 – dez/2024 · Curitiba, PR</p>
+
+        <div class="subhead">Infraestrutura & Microsoft</div>
+        <ul>
+          <li>Administração de Active Directory, Windows Server (2012/2016/2019), Exchange Online, SharePoint e Teams.</li>
+          <li>Gestão de licenças, permissões, políticas de segurança e rotinas de backup/restore.</li>
+        </ul>
+
+        <div class="subhead">Redes</div>
+        <ul>
+          <li>Configuração e troubleshooting de VLAN, DHCP, DNS, TCP/IP, IPv4/IPv6 e Wi‑Fi corporativo.</li>
+          <li>Suporte a switches e roteadores de rede.</li>
+        </ul>
+
+        <div class="subhead">Suporte & Governança</div>
+        <ul>
+          <li>Atendimento remoto e local via TeamViewer, SCCM e AnyDesk.</li>
+          <li>Aplicação de práticas ITIL/COBIT e criação de base de conhecimento.</li>
+        </ul>
+
+        <div class="subhead">Telefonia/VoIP</div>
+        <ul>
+          <li>Administração de Cisco CUCM, Jabber, URA, roteamento e integração com PABX Dígitro; gestão de telefonia móvel.</li>
+          <li>Gestão de telefonia móvel: estoque, planos, portabilidade e controle de dispositivos.</li>
+                 
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="skills">
+      <h2 id="skills" class="section-title">Competências</h2>
+      <div class="skills" role="list">
+        <span class="chip" role="listitem">AD / Entra ID</span>
+        <span class="chip" role="listitem">Microsoft 365 (Exchange/Teams/SharePoint)</span>
+        <span class="chip" role="listitem">Windows Server</span>
+        <span class="chip" role="listitem">Intune / SCCM</span>
+        <span class="chip" role="listitem">TCP/IP • DNS/DHCP • VPN • VLAN</span>
+        <span class="chip" role="listitem">ServiceNow • TeamViewer • AnyDesk</span>
+        <span class="chip" role="listitem">Cisco CUCM / VoIP</span>
+        <span class="chip" role="listitem">ITIL / COBIT</span>
+        <span class="chip" role="listitem">Backup/Restore • MFA/SSO</span>
+        <span class="chip" role="listitem">Hyper‑V</span>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="formacao">
+      <h2 id="formacao" class="section-title">Formação Acadêmica</h2>
+      <p><strong>Unisenai/PR</strong> — Pós‑graduação em Gerenciamento e Processos Logísticos — 2023-2024</p>
+      <p><strong>Faculdade FAEL</strong> — Pós‑graduação em Administração de Banco de Dados — 2021–2022</p>
+      <p><strong>Faculdade da Indústria</strong> — Especialização em Gerenciamento de Projetos — 2019–2021</p>
+      <p><strong>Faculdade das Indústrias</strong> — Bacharelado em Sistemas de Informação — 2009–2013</p>
+    </section>
+
+    <section class="section" aria-labelledby="certs">
+      <h2 id="certs" class="section-title">Conquistas e Certificações</h2>
+      <ul>
+        <li><strong>CCST Cybersecurity</strong> — 2025</li>
+        <li><strong>Lean Six Sigma Yellow Belt</strong> — 2024</li>
+        <li><strong>PCAP: Programming Essentials in Python</strong> — 2023</li>
+        <li><strong>Fundamentos de ITIL</strong> — 2020</li>
+        <li><strong>Cisco CCNAv7 — Introduction to Networks</strong> — 2021</li>
+        <li><strong>USP — Equipamentos de Rede Huawei (treinamento)</strong> — 2021</li>
+        <li><strong>Power BI</strong> — Em curso</li>
+      </ul>
+    </section>
+
+  </main>
 </body>
 </html>
